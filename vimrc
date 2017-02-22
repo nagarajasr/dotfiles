@@ -1,5 +1,5 @@
 " Leader
-let mapleader = " "
+let mapleader = ","
 
 set backspace=indent,eol,start   " Backspace deletes like most programs in insert mode
 set nobackup
@@ -86,7 +86,7 @@ set textwidth=78
 
 " Numbers
 set number
-set numberwidth=5
+set numberwidth=4
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -120,7 +120,7 @@ nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <leader>gt :TestVisit<CR>
 
 " Run commands that require an interactive shell
-nnoremap <Leader>r :RunInInteractiveShell<space>
+" nnoremap <Leader>r :RunInInteractiveShell<space>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
@@ -155,3 +155,10 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 1
