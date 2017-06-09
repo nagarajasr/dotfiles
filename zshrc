@@ -46,3 +46,7 @@ _load_settings "$HOME/.zsh/configs"
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# tabtab source for jhipster package
+# uninstall by removing these lines or running `tabtab uninstall jhipster`
+[[ -f /home/nagu/.config/yarn/global/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/nagu/.config/yarn/global/node_modules/tabtab/.completions/jhipster.zsh

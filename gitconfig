@@ -25,3 +25,5 @@
   autosquash = true
 [include]
   path = ~/.gitconfig.local
+[remote "ec2"]
+	receivepack = git receive-pack
